@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXIST AEVO (
+    description VARCHAR(30) NOT NULL,
+    direction VARCHAR(5) ,
+    underlying VARCHAR(10),
+    spot_ref DOUBLE PRECISION ,
+    expiration_date VARCHAR(10),
+    strike DOUBLE PRECISION,
+    iv DOUBLE PRECISION,
+    delta DOUBLE PRECISION,
+    theta DOUBLE PRECISION,
+    vega DOUBLE PRECISION,
+    indication DOUBLE PRECISION,
+    quote_time, BIGINT,
+    PRIMARY KEY (underlying, expiration_date,direction,strike,quote_time)
+);
