@@ -73,5 +73,11 @@ Here is the result up to June 30.
 
 ![PNL Analysis up to June 30](result/Jun30_res.png)
 
+# Vol Smile Visualization
+
+Head to `scripts/smiles.ipynb`. Remember to replace `aevo_api_url` with the actual endpoint.
+
+![Vol Smile](result/vol_smile.png)
+
 ## Contact
 Twitter [@0xJChen](https://twitter.com/0xJChen)
