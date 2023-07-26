@@ -94,4 +94,27 @@ async def download_and_extract_to_csv(ticker,date,granularity="1h"):
                 print(f"url: {url}")
             
 
-                
+def fmt_date_from_unix(unittimestamp):
+    import datetime
+
+    dt_object = datetime.datetime.fromtimestamp(unittimestamp)
+
+    formatted_date = dt_object.strftime("%d%b%y").upper()
+
+    return formatted_date
+
+def dashed(func):
+    def wrapper(content, docs=""):
+        print("-"*20 + docs+ "-"*20)
+        func(content, docs)
+        print("-"*70)
+    return wrapper
+
+
+
+@dashed
+def dashed_print(content, docs=""):
+    print(content)
+
+def inline_print(docs):
+    print("-"*20 + docs+ "-"*20)
